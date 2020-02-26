@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "mongoose": "^5.8.12",
+    "nunjucks": "^3.2.0"
+  },
+  "name": "pokedex",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
