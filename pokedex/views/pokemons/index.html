@@ -3,13 +3,13 @@
 {% block content %}
   <h2>Pokémons</h2>
 
-  {% for p in Pokemon %}
+  {% for pokemon in pokemons %}
     <div class="panel panel-default">
       <div class="panel-heading">
-        {{p.name}}
+        <a href='/{{pokemon._id}}'>{{pokemon.name}}</a>
       </div>
-      <div class="panel-content">
-        {{p.description}}
+      <div class="panel-body">
+        {{pokemon.description}}
       </div>
     </div>
   {% endfor %}

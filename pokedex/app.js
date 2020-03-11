@@ -2,7 +2,17 @@ var express = require('express');
 var mongoose = require('mongoose');
 var nunjucks = require('nunjucks');
 
-mongoose.connect('mongodb://localhost/Pokedex/pokedex');
+mongoose.connect('mongodb+srv://admin:admin@cluster-1-lgths.mongodb.net/pokedex?retryWrites=true&w=majority', { useUnifiedTopology: true, useNewUrlParser: true });
+// const Pokemon = require('./models/Pokemon.js');
+// new Pokemon({
+//   name: 'Bulbizarre',
+//   number: 1,
+//   description: 'Pokémon de départ de type plante et poison',
+//   types: [],
+// }).save().then(doc => {
+//   console.log('Doc créé');
+//   console.log(doc);
+// });
 
 require('./models/Pokemon');
 require('./models/Type');
