@@ -2,10 +2,9 @@ var mongoose = require('mongoose');
 
 var typeSchema = new mongoose.Schema({
   name: String,
-  color: {
-      type: String,
-      default: 'red'
-  }
+  color: String,
+  textColor: String,
+
 });
 
 /*

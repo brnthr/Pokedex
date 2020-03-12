@@ -5,7 +5,10 @@ var pokemonSchema = new mongoose.Schema({
   number: Number,
   description: String,
   picture: String,
-  types: [String]
+  types: [{
+    type: mongoose.Types.ObjectId,
+    ref: 'Type',
+  }],
 });
 
 var Pokemon = mongoose.model('Pokemon', pokemonSchema);
