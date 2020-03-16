@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 var nunjucks = require('nunjucks');
 
 mongoose.connect('mongodb+srv://admin:admin@cluster-1-lgths.mongodb.net/pokedex?retryWrites=true&w=majority', { useUnifiedTopology: true, useNewUrlParser: true });
+
 // const Pokemon = require('./models/Pokemon.js');
 // new Pokemon({
 //   name: 'Bulbizarre',
