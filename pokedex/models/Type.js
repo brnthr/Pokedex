@@ -4,7 +4,7 @@ var typeSchema = new mongoose.Schema({
   name: String,
   color: String,
   textColor: String,
-//  imgPath: String,
+  //imgPath: String,
 });
 
 /*
