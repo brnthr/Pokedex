@@ -43,7 +43,7 @@ router.get('/:id', (req, res) => {
   Pokemon.findById(req.params.id).populate('types')
   .then(pokemon => {
     //console.log(pokemon);
-    //res.render('./../views/pokemons/show.html', { pokemon : pokemon });
+    res.render('./../views/pokemons/show.html', { pokemon : pokemon });
   })
   .catch(err => {
     res.status(404);
