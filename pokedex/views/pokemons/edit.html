@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
-  <form method="POST">
+  <form method="POST" action="{{endpoint}}">
     <div class="form-group">
       <label for="name">Nom du pokémon</label>
       <input type="text" id="name" name="name" class="form-control" value="{{pokemon.name}}">
