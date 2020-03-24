@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var multer = require('multer');
 
 var upload = multer({
-  dest: __dirmane + '/uploads'
+  dest: __dirname + '/uploads'
 });
 
 mongoose.connect('mongodb+srv://admin:admin@cluster-1-lgths.mongodb.net/pokedex?retryWrites=true&w=majority', { useUnifiedTopology: true, useNewUrlParser: true });
