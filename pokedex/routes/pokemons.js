@@ -29,7 +29,6 @@ router.get('/edit/:id', (req, res) => {
   Type.find({})
   .then(types => {
     Pokemon.findById(req.params.id).then(pokemon => {
-      //console.log(pokemon);
       res.render('./../views/pokemons/edit.html', { pokemon : pokemon, types : types, endpoint: '/' + pokemon._id.toString() });
     });
   })
@@ -38,11 +37,19 @@ router.get('/edit/:id', (req, res) => {
   });
 });
 
+router.post('/delete/:id', (req, res) => {
+  Pokemon.findOneAndRemove({ _id: req.params.id }).then(() => {
+    res.redirect('/');
+  })
+  .catch(err => {
+    res.status(404);
+    res.send("404");
+  });
+});
 
 router.get('/:id', (req, res) => {
   Pokemon.findById(req.params.id).populate('types')
   .then(pokemon => {
-    //console.log(pokemon);
     res.render('./../views/pokemons/show.html', { pokemon : pokemon });
   })
   .catch(err => {

@@ -20,8 +20,9 @@ app.use(upload.single('file'));
 
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
-app.use('/', require('./routes/pokemons'));
 app.use('/types', require('./routes/types'));
+
+app.use('/', require('./routes/pokemons'));
 
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
