@@ -37,7 +37,7 @@ router.get('/edit/:id', (req, res) => {
   });
 });
 
-router.post('/delete/:id', (req, res) => {
+router.get('/delete/:id', (req, res) => {
   Pokemon.findOneAndRemove({ _id: req.params.id }).then(() => {
     res.redirect('/');
   })
