@@ -26,6 +26,8 @@ app.use('/', require('./routes/pokemons'));
 
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
+app.use('/img', express.static(__dirname + '/img'));
+
 nunjucks.configure('views', {
   autoescape: true,
   express: app
