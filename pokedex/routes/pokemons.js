@@ -66,7 +66,8 @@ router.post('/:id?', (req, res) => {
     else {
       resolve(new Pokemon());
     }
-  }).then(pokemon => {
+  })
+  .then(pokemon => {
     pokemon.name = req.body.name;
     pokemon.description = req.body.description;
     pokemon.number = req.body.number;
