@@ -14,6 +14,7 @@ router.get('/',(req, res) => {
     });
 });
 
+//pour ajouter un nouveau pokémon
 router.get('/new', (req, res) => {
   Type.find({})
   .then(types => {
@@ -25,6 +26,8 @@ router.get('/new', (req, res) => {
   });
 });
 
+//pour editer les pokemons deja existant
+/*
 router.get('/edit/:id', (req, res) => {
   Type.find({})
   .then(types => {
@@ -36,7 +39,9 @@ router.get('/edit/:id', (req, res) => {
     console.error(err);
   });
 });
+*/
 
+// pour supprimer un pokemon
 router.get('/delete/:id', (req, res) => {
   Pokemon.findOneAndRemove({ _id: req.params.id }).then(() => {
     res.redirect('/');

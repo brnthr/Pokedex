@@ -12,11 +12,11 @@
           </p>
           <h3>Types :</h3>
           {% for t in pokemon.types %}
-        <a href="/types/{{t.name}}" style="background-color: {{t.color}}; color:{{t.textColor}}" class="label label-default">{{t.name}}</a>
+        <a href="/types/{{t.name}}" style="background-color: {{t.color}}; color:{{t.textColor}}" class="btn">{{t.name}}</a>
           {%endfor%}
       </div>
       <div class="col-sm-3">
-        <a href="/edit/{{pokemon._id}}" class="btn btn-primary">Editer</a>
+        <!--<a href="/edit/{{pokemon._id}}" class="btn btn-primary">Editer</a>-->
         <a href="/delete/{{pokemon._id}}" class="btn btn-danger">Supprimer</a>
       </div>
   </div>
